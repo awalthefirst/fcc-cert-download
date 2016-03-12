@@ -10,11 +10,13 @@ app.get('/',function(req,res){
     var frontEnd = __dirname+'/fccFront.jpg';
     var dataVis = __dirname+'/fccDataVis.jpg';
     var backEnd = __dirname+'/fccBack.jpg';
-    var cert_type  = req.query.cert_type || frontEnd;
     var cert_name = req.query.cert_name || 'camper name';
     var cert_date = req.query.cert_date || 'December, 4th 2014';
     var cert_link = req.query.cert_link || 'verify this certification at: http://freecodecamp.com/camper Name/back-end-certification';
     
+    
+    var certType = (req.query.cert_type || '').toLowerCase;
+    var cert_type  = (certType == 'front')? frontEnd : (certType == 'back')? backEnd : (certType == 'data')? dataVis : frontEnd;
     
      // trigger auto download 
     // res.attachment('free code camp certificate.jpg');
