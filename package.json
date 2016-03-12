@@ -1,0 +1,16 @@
+{
+  "name": "fcc_cert_download",
+  "version": "1.0.0",
+  "description": "enables freecodecamp campers to download their certificates",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.13.4",
+    "gm": "^1.21.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
